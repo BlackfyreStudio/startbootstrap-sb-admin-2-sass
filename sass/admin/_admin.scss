@@ -1,0 +1,378 @@
+// Global Styles
+
+body {
+  background-color: $gray-lightest;
+}
+
+// Wrappers
+
+#wrapper {
+  width: 100%;
+}
+
+#page-wrapper {
+  padding: 0 15px;
+  min-height: 568px;
+  background-color: white;
+}
+
+@media(min-width:768px) {
+  #page-wrapper {
+    position: inherit;
+    margin: 0 0 0 250px;
+    padding: 0 30px;
+    border-left: 1px solid darken($gray-lightest, 6.5%);
+  }
+}
+
+// Navigation
+
+// --Topbar
+
+.navbar-top-links {
+  margin-right: 0;
+
+  li {
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 15px;
+    }
+
+    a {
+      padding: 15px;
+      min-height: 50px;
+    }
+  }
+
+  .dropdown-menu li {
+    display: block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      padding: 3px 20px;
+      min-height: 0;
+
+      div {
+        white-space: normal;
+      }
+    }
+  }
+
+  .dropdown-messages, .dropdown-tasks, .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+  }
+
+  .dropdown-messages {
+    margin-left: 5px;
+  }
+
+  .dropdown-tasks {
+    margin-left: -59px;
+  }
+
+  .dropdown-alerts {
+    margin-left: -123px;
+  }
+
+  .dropdown-user {
+    right: 0;
+    left: auto;
+  }
+}
+
+// --Sidebar
+
+.sidebar {
+  .sidebar-nav.navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sidebar-search {
+    padding: 15px;
+  }
+
+  ul li {
+    border-bottom: 1px solid darken($gray-lightest, 6.5%);
+    a {
+      &.active {
+        background-color: $gray-lighter;
+      }
+    }
+  }
+
+  .arrow {
+    float: right;
+  }
+
+  .fa.arrow:before {
+    content: "\f104";
+  }
+
+  .active > a > .fa.arrow:before {
+    content: "\f107";
+  }
+
+  .nav-second-level, .nav-third-level {
+    li {
+      border-bottom: none !important;
+    }
+
+  }
+
+  .nav-second-level {
+    li  {
+      a {
+        padding-left: 37px;
+      }
+    }
+  }
+
+  .nav-third-level {
+    li {
+      a {
+        padding-left: 52px;
+      }
+    }
+  }
+}
+
+
+@media(min-width:768px) {
+  .sidebar {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    margin-top: 51px;
+  }
+
+  .navbar-top-links{
+    .dropdown-messages, .dropdown-tasks, .dropdown-alerts {
+      margin-left: auto;
+    }
+  }
+}
+
+// Buttons
+
+.btn-outline {
+  color: inherit;
+  background-color: transparent;
+  transition: all .5s;
+
+  &.btn-primary {
+    color: $brand-primary;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-success {
+    color: $brand-success;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-info {
+    color: $brand-info;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-warning {
+    color: $brand-warning;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+
+  &.btn-danger {
+    color: $brand-danger;
+
+    &:hover {
+      color: $btn-outline-hover;
+    }
+  }
+}
+
+// Chat Widget
+
+.chat {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted $gray-light;
+
+    &.left .chat-body {
+      margin-left: 60px;
+    }
+
+    .chat-body p {
+      margin: 0;
+    }
+  }
+}
+
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+  margin-right: 5px;
+}
+
+.chat-panel .panel-body {
+  height: 350px;
+  overflow-y: scroll;
+}
+
+// Login Page
+
+.login-panel {
+  margin-top: 25%;
+}
+
+// Flot Charts Containers
+
+.flot-chart {
+  display: block;
+  height: 400px;
+}
+
+.flot-chart-content {
+  width: 100%;
+  height: 100%;
+}
+
+// DataTables Overrides
+
+table.dataTable thead {
+  .sorting, .sorting_asc, .sorting_desc, .sorting_asc_disabled, .sorting_desc_disabled {
+    background: transparent;
+  }
+
+  .sorting_asc:after {
+    content: "\f0de";
+    float: right;
+    font-family: fontawesome;
+  }
+
+  .sorting_desc:after {
+    content: "\f0dd";
+    float: right;
+    font-family: fontawesome;
+  }
+
+  .sorting:after {
+    content: "\f0dc";
+    float: right;
+    font-family: fontawesome;
+    color: rgba(50,50,50,.5);
+  }
+}
+
+// Circle Buttons
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.428571429;
+
+  &.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  &.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}
+
+// Grid Demo Elements
+
+.show-grid {
+  margin: 15px 0;
+
+  [class^="col-"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #eee !important;
+  }
+}
+
+// Custom Colored Panels
+
+.huge {
+  font-size: 40px;
+}
+
+.panel-green {
+  border-color: $brand-success;
+  .panel-heading {
+    border-color: $brand-success;
+    color: white;
+    background-color: $brand-success;
+  }
+  a {
+    color: $brand-success;
+    &:hover {
+      color: darken($brand-success, 15%);
+    }
+  }
+}
+
+.panel-red {
+  border-color: $brand-danger;
+  .panel-heading {
+    border-color: $brand-danger;
+    color: white;
+    background-color: $brand-danger;
+  }
+  a {
+    color: $brand-danger;
+    &:hover {
+      color: darken($brand-danger, 15%);
+    }
+  }
+}
+
+.panel-yellow {
+  border-color: $brand-warning;
+  .panel-heading {
+    border-color: $brand-warning;
+    color: white;
+    background-color: $brand-warning;
+  }
+  a {
+    color: $brand-warning;
+    &:hover {
+      color: darken($brand-warning, 15%);
+    }
+  }
+}

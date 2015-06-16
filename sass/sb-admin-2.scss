@@ -1,0 +1,15 @@
+$icon-font-path: '../fonts/' !default;
+$fa-font-path: '../fonts' !default;
+
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import "../bower_components/bootstrap-social/bootstrap-social";
+@import "admin/_variables";
+@import "admin/_mixins";
+@import "admin/_admin";
+@import "admin/_timeline";
+@import "admin/metisMenu";
+
+$data-tables-images-path: '../images/' !default;
+@import "admin/dataTablesBootstrap";
+@import "admin/dataTablesResponsive";
